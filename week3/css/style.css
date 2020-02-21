@@ -1,0 +1,53 @@
+#package{
+	width: 620px;
+	height: 180px;
+	background-color: #3F250B;
+	/* horizontal + vertical center align - parent div */
+	position: relative;
+	/*//////*/
+}
+#name{
+	/* horizontal + vertical center align - child div */
+  border-radius: 25px;
+	width: 500px;
+	height: 120px;
+	background-color: white;
+  border: 10px solid red;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*//////*/
+	font-size: 105px;
+  text-shadow: 3px 3px blue;
+	color:blue;
+	font-style: italic;
+	font-weight: bold;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+	letter-spacing: -2px;
+}
+#subtitle{
+	position: absolute;
+	bottom: 15%;
+	left: 92%;
+	font-family: sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 20px;
+}
+#subtitle2{
+	position: absolute;
+	top: 90%;
+	left: 70%;
+	transform: translate(-50%, 0%);
+	font-family: sans-serif;
+	font-weight: bold;
+	letter-spacing: 4px;
+	font-size: 12px;
+	color: white;
+  width: 600px;
+
+}
