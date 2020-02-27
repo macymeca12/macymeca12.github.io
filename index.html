@@ -1,15 +1,39 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Marianny's website</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		
- 	</head>
- 	<body>
- 		<div> <b><a href="week2/index.html"> WEEK 2.</b></div>
- 		<div> <b><a href="week3/index.html"> WEEK 3.</b></div>
- 		<div class="main_div">
- 			<img src="img/code_poem.png" id="poem"/>
- 			<img src="img/ovum.png" id="img1">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- webfont link-->
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script|Krona+One&display=swap" rel="stylesheet">
+	<!-- javascript link for accordion menu  -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="js/jquery.collapse.js"></script>
+    <script src="js/jquery.collapse_storage.js"></script>
+    <script src="js/jquery.collapse_cookie_storage.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			Marianny Pantophlet
 		</div>
-	</body>
+	</div>
+	<div class="menu">
+		<ul class="menu_list">
+		  <li id="menu_home"><a href="#">HOME</a></li>
+		  <li id="menu_about">ABOUT</li>
+		  <div id="default-example" data-collapse="accordion">
+		  <li id="menu_works">WORKS</li>
+		  <div>
+
+		  	<ul class="work_list">
+			    <li><a href="week2/index.html">Video Player</a></li>
+			    <li><a href="week3/index.html">Snack Wrapper</a></li>
+			    <li>In Progress</li>
+			  </ul>
+		  </div>
+      </div>
+		</ul>
+	</div>
+
+</body>
 </html>
