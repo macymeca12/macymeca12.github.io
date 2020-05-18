@@ -6,7 +6,10 @@
 	font-family: 'Krona One', sans-serif;
 	font-size: 80px;
 	transition: -webkit-text-stroke-color 2s, color 2s;
-	background-image: url("heart.png");
+}
+.container{
+	background-image: url('heart.png');
+	background-size: cover;
 }
 .title:hover{
 	color:pink;
