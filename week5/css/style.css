@@ -1,16 +1,69 @@
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: skyblue;
+}
+
+li {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 50px 50px;
+  text-decoration: none;
+}
+
+li:hover:not(.active) {
+  background-color: steelblue;
+}
+
+.menu_list{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Krona One', sans-serif;
+    font-size: 25px;
+}
+.work_list{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Krona One', sans-serif;
+    font-size: 15px;
+}
+#menu_home:hover{
+  color:pink;
+}
+#menu_about:hover{
+  color:pink;
+}
+#menu_works:hover{
+  color:pink;
+}
+a:link{
+  color:black;
+  text-decoration: none;
+}
+a:hover{
+  color:#0000ff;
+}
+a:visited{
+  color:inherit;
+}
 .left_container{
-	position:fixed;
-	top:3%;
+	position:inherit;
+	top:15%;
 	left:4%;
 	width:40%;
 	height: 97%;
 	text-align: left;
 }
 .right_container{
-	display: none;
-	position:fixed;
-	top:3%;
-	right:4%;
+	position: absolute;
+	top:15%;
+	right:10%;
 	width:20%;
 	height: 97%;
 	text-align: right;
@@ -39,7 +92,7 @@
 	height: auto;
 	width: auto;
 	position: fixed;
-	top:5%;
+	top:15%;
 	left: 50%;
 }
 .hvolleyball_png{
@@ -61,12 +114,12 @@
 		display: inherit;
 	}
 }
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 850px) {
 	.hidden3 {
 		display: inherit;
 	}
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
 	.hidden1 {
 	display: inherit;
 	}
