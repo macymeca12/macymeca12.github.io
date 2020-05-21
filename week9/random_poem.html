@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Poem</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="favicon.ico" href="../img/favicon.ico" >
+  <!-- webfont link-->
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Krona+One&display=swap" rel="stylesheet">
+  <!-- javascript link for accordion menu  -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="../js/jquery.collapse.js"></script>
+    <script src="../js/jquery.collapse_storage.js"></script>
+    <script src="../js/jquery.collapse_cookie_storage.js"></script>
+</head>
+<body>
+  <div class="menu">
+    <ul class="menu_list">
+      <li id="menu_home"><a href="../index.html">HOME</a></li>
+      <li id="menu_about"><a href="../about.html">ABOUT</a></li>
+      <div id="default-example" data-collapse="accordion">
+        <li id="../menu_works">WORKS</li>
+       <!--li style="float:right"><a class="active" href="#about">About</a></li -->
+      <div>
+        <div class="work_list">
+          <ul><a href="../week2/index.html">Video Player</a></ul>
+          <ul><a href="../week3/index.html">Snack Wrapper</a></ul>
+          <ul><a href="../week5/index.html">Responsive Webpage</a></ul>
+          <ul><a href="../week9/random_poem.html">Random Poem</a></ul>
+            <ul><a href="../week1O/index.html">Slide Shows</a></ul>
+      </div>
+      </div>
+  </div>
+</div>
+<div class= "rmpoem">
+<div id= "poem">
+<p>
+Either the <span id="darkness">Darkness</span> alters - <br>
+Or something in the sight<br>
+Adjusts itself to <span id="midnight">Midnight</span><br>
+And <span id="life">Life</span> steps almost straight.
+</p>
+</div>
+</div>
+
+<button onclick="myFunction()">
+shuffle!
+</button>
+
+<script>
+
+//this function will be executed whenever the shuffle button is clicked because of 'onclick' DOM inside the button tag.
+function myFunction(){
+  //this Math.random will generate random number between 0 and 1
+  var randomNumber = Math.floor(Math.random()*15);
+  var chosenWord = "";
+  var chosenWord2 = "";
+  var bgColor = "";
+
+  //using if statement, check if the randomNumber is larger than 0.5 or not.
+  if (randomNumber > 10){
+    // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
+    chosenWord = "Life";
+    bgColor = "snow";
+  }
+  else if(randomNumber =0){
+    // if randomNumber is not larger than 0.5 assign "Death" to chosenWord and "darkgray" to bg color
+    chosenWord = "Darkness";
+    bgColor = "darkgray";
+
+  }
+  else if(randomNumber % 2 = 0){
+    chosenWord2 = "Light";
+    bgColor = "lightyellow";
+  }
+  else(){
+    chosenWord2 = "midnight";
+    bgColor = "darkblue";
+  }
+
+  //get the elements from html page which are needed to be changed
+  var life = document.getElementById("life");
+  var darkness = document.getElementById("darkness");
+  var midnight = document.getElementById("midnight")
+  var poem = document.getElementById("poem");
+
+  //assign the variables to each element so that we can see the changes from webpage.
+  life.innerHTML = chosenWord;
+  darkness.innerHTML = chosenWord2;
+  midnight.innerHTML = chosenWord2;
+  poem.style.backgroundColor = bgColor;
+
+  //to check newly assigned randomNumber from the console, let's add this line
+  console.log(randomNumber);
+}
+</script>
+</body>
+</html>
