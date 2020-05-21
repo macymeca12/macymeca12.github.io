@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ABOUT</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="favicon.ico" href="../img/favicon.ico" >
+  <!-- webfont link-->
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Krona+One&display=swap" rel="stylesheet">
+  <!-- javascript link for accordion menu  -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="../js/jquery.collapse.js"></script>
+    <script src="../js/jquery.collapse_storage.js"></script>
+    <script src="../js/jquery.collapse_cookie_storage.js"></script>
+<style>
+
+/* Slideshow container */
+.slideshow-container {
+  width: 60%;
+  position: relative;
+  font-family: 'Krona One', sans-serif;
+  background: #f1f1f1f1;
+  margin:0px auto;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  height: 400px;
+  text-align: center;
+}
+
+/* assign images of project to each slide div */
+#slide1{
+  background-image: url('media/eye_adobe.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#slide2{
+  background-image: url('media/discussion_board.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#slide3{
+  background-image: url('media/gown_adobe.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#slide4{
+  background-image: url('media/media_chart.png');
+  background-size: cover;
+  background-position: center;
+}
+#slide5{
+  background-image: url('media/iconic.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.description{
+  position: absolute;
+  left:35%;
+  bottom:-25%;
+  background-color: skyblue;
+  padding:8px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+</style>
+</head>
+
+<body>
+  <div class="menu">
+		<ul class="menu_list">
+		  <li id="menu_home"><a href="index.html">HOME</a></li>
+		  <li id="menu_about"><a href="about.html">ABOUT</a></li>
+		  <div id="default-example" data-collapse="accordion">
+				<li id="menu_works">WORKS</li>
+			 <!--li style="float:right"><a class="active" href="#about">About</a></li -->
+		  <div>
+		  	<div class="work_list">
+			    <ul><a href="../week2/index.html">Video Player</a></ul>
+			    <ul><a href="../week3/index.html">Snack Wrapper</a></ul>
+			    <ul><a href="../week5/index.html">Responsive Webpage</a></ul>
+					<ul><a href="../week9/random_poem.html">Random Poem</a></ul>
+          <ul><a href="../week10/index.html">Slide Show</a></ul>
+
+		  </div>
+      </div>
+	</div>
+</div>
+<div>
+  <div class="slideshow-container">
+
+  <!-- slide show divs -->
+  <div id="slide1" class="mySlides">
+    <div class="description">
+      <p class="author">The Eye(2019)</p>
+      <a href="slide-second.html" class="link">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide2" class="mySlides">
+    <div class="description">
+      <p class="author"> Outline Discussion Board(2020)</p>
+      <a class="link">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide3" class="mySlides">
+    <div class="description">
+      <p class="author">Evening Gown(2015)</p>
+      <a class="link">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide4" class="mySlides">
+    <div class="description">
+      <p class="author">Data Consumption(2019)</p>
+      <a class="link">Go to the page</a>
+    </div>
+  </div>
+
+  <div id="slide5" class="mySlides">
+    <div class="description">
+      <p class="author">Outline Mobile Website(2019)</p>
+      <a class="link">Go to the page</a>
+    </div>
+  </div>
+
+  <!-- left/right side button -->
+  <a class="prev" onclick="setIndexFromSideButton(-1)">❮</a>
+  <a class="next" onclick="setIndexFromSideButton(1)">❯</a>
+
+  </div>
+
+</div>
+
+<script>
+
+// before user clicks any of side arrow buttons, initiate the slide show with the first slide image.
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function setIndexFromSideButton(n){
+
+  // increment index number depends on the value 'n' so that we can figure out which slide has to be shown on the webpage
+  slideIndex = slideIndex + n;
+
+
+  // call and execute the function showSlides()
+  showSlides();
+
+}
+
+function showSlides() {
+
+  // ask browser search and get every HTML element with the class name 'mySlides' and assign those elements to variable 'slides'
+  var slideDivElements = document.getElementsByClassName("mySlides");
+
+
+  // if the variable slideIndex is larger than the number of slides, reset the slideIndex to 1 so that user can get back to the first slide
+  if (slideIndex > slideDivElements.length) {slideIndex = 1}
+
+
+  // if the variable slideIndex is smaller than 1, reset the slideIndex to the biggest index number so that user can get to the last slide
+  if (slideIndex < 1) {slideIndex = slideDivElements.length}
+
+
+  // change the style - display property of every slide (the elements inside 'slideDivElements' ) to 'none'
+  for (var i = 0; i < slideDivElements.length; i++) {
+      slideDivElements[i].style.display = "none";
+  }
+
+
+  // change the style - display property of the slide which has to be shown on webpage to 'block'
+  slideDivElements[slideIndex-1].style.display = "block";
+
+}
+</script>
+
+</body>
+</html>
