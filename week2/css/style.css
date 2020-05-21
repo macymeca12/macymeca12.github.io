@@ -35,26 +35,29 @@ figure {
 	margin:1.25rem auto;
 	padding:20px;
 	padding:1.051%;
-	position: fixed;
+	/* position: fixed; */
 	top:0px;
 }
 video {
-	width:100%;
-	height:100%;
+	width:50%;
+	height:50%;
+	top: 30%;
+	left: 20;
+	position: fixed;
 }
 .title_img{
 	width:100%;
 }
 #draggable1{
-	top:0px;
+	top: 20%;
 	right:0px;
 	width: 30%;
 	position: fixed !important;
 }
 #draggable2{
-	top:0px;
-	left:0px;
-	width: 30%;
+	top: 70%;
+	right: 0%;
+	width: 0%;
 	position: fixed !important;
 }
 
@@ -67,8 +70,9 @@ video {
 	overflow:hidden;
 	background:transparent;
 	width:100%;
-	height:10%;
-	position:relative;
+	height:50%;
+	top: 80%;
+	position:fixed;
 }
 .controls[data-state=hidden] {
 	display:none;
@@ -151,6 +155,7 @@ video {
 		/* we want the buttons to be proportionally bigger, so give their parent a set height */
 		height:30px;
 		height:1.876rem;
+		position: fixed;
 	}
 }
 @media screen and (max-width:42.5em) {
@@ -177,7 +182,62 @@ video {
 		margin:0 auto;
 	}
 	.controls button {
-		background-position:center center;
+		background-position:bottom bottom;
 	}
 
+}
+ul {
+list-style-type: none;
+margin: 20px 50px;
+padding: 0;
+overflow: hidden;
+background-color: skyblue;
+}
+li {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 40px 50px;
+  text-decoration: none;
+}
+
+li:hover:not(.active) {
+  background-color: steelblue;
+}
+
+.menu_list{
+	position: inherit;
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Krona One', sans-serif;
+  	font-size: 25px;
+}
+.work_list{
+	position: inherit;
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Krona One', sans-serif;
+  	font-size: 13px;
+}
+#menu_home:hover{
+	color:pink;
+}
+#menu_about:hover{
+	color:pink;
+}
+#menu_works:hover{
+	color:pink;
+}
+a:link{
+	color:black;
+	text-decoration: none;
+}
+a:hover{
+	color:#0000ff;
+}
+a:visited{
+	color:inherit;
 }
