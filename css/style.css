@@ -1,12 +1,42 @@
+/* body{
+	background-color: pink;
+} */
 .title{
 	position: absolute;
 	top: 50%;
 	left: 50%;
+
 	transform: translate(-50%, -50%);
 	font-family: 'Krona One', sans-serif;
 	font-size: 80px;
 	transition: -webkit-text-stroke-color 2s, color 2s;
 }
+.socials{
+position:fixed;
+bottom: 0%;
+left: 0%;
+width: 5%;
+height: 10%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+	width: 70%;
+	height: 50%;
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+	width: 70%;
+	height: 50%;
+  background: #007bb5;
+  color: white;
+}
+
 .container{
 	background-image: url('heart.png');
 	background-size: cover;
@@ -25,7 +55,7 @@
 	left:0;
 	z-index: 0;
 	animation-name: background_animation;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-fill-mode:forwards;
 	animation-delay: 3s;
 }
@@ -219,33 +249,50 @@
 	}
 }
 
+ul {
+list-style-type: none;
+margin: 20px 50px;
+padding: 0;
+overflow: hidden;
+background-color: skyblue;
+}
+li {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 40px 50px;
+  text-decoration: none;
+}
 
-.menu{
-	margin:24px;
+li:hover:not(.active) {
+  background-color: steelblue;
 }
 
 .menu_list{
+	position: inherit;
 	list-style-type: none;
   	margin: 0;
   	padding: 0;
-  	font-family: 'Bad Script', cursive;
-  	font-size: 40px;
+  	font-family: 'Krona One', sans-serif;
+  	font-size: 25px;
 }
 .work_list{
+	position: inherit;
 	list-style-type: none;
   	margin: 0;
   	padding: 0;
-  	font-family: 'Bad Script', cursive;
-  	font-size: 28px;
+  	font-family: 'Krona One', sans-serif;
+  	font-size: 13px;
 }
 #menu_home:hover{
-	color:skyblue;
+	color:pink;
 }
 #menu_about:hover{
-	color:skyblue;
+	color:pink;
 }
 #menu_works:hover{
-	color:skyblue;
+	color:pink;
 }
 a:link{
 	color:black;
