@@ -285,6 +285,14 @@ li:hover:not(.active) {
   	font-family: 'Krona One', sans-serif;
   	font-size: 13px;
 }
+.work2_list{
+	position: inherit;
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Krona One', sans-serif;
+  	font-size: 13px;
+}
 #menu_home:hover{
 	color:pink;
 }
@@ -292,6 +300,9 @@ li:hover:not(.active) {
 	color:pink;
 }
 #menu_works:hover{
+	color:pink;
+}
+#WP2_OPTIONS:hover{
 	color:pink;
 }
 a:link{
