@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CLASSWORK</title>
+	<link rel="stylesheet" type="text/css" href="css/classwork.css">
+	<link rel="icon" type="favicon.ico" href="img/favicon.ico" >
+	<!-- webfont link-->
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script|Krona+One&display=swap" rel="stylesheet">
+	<!-- javascript link for accordion menu  -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="js/jquery.collapse.js"></script>
+    <script src="js/jquery.collapse_storage.js"></script>
+    <script src="js/jquery.collapse_cookie_storage.js"></script>
+</head>
+<body>
+	<div class="menu">
+		<ul class="menu_list">
+		  <li id="menu_home"><a href="index.html">HOME</a></li>
+		  <li id="menu_about"><a href="about.html">ABOUT</a></li>
+		  <div id="default-example" data-collapse="accordion">
+				<li id="menu_works">WORKS</li>
+			 <!--li style="float:right"><a class="active" href="#about">About</a></li -->
+		  <div>
+		  	<div class="work_list">
+			    <ul><a href="week2/index.html">Video Player</a></ul>
+			    <ul><a href="week3/index.html">Snack Wrapper</a></ul>
+			    <ul><a href="week5/index.html">Responsive Webpage</a></ul>
+					<ul><a href="week9/random_poem.html">Random Poem</a></ul>
+					<ul><a href="week1O/index.html">Slide Shows</a></ul>
+		  </div>
+      </div>
+	</div>
+</div>
+
+<div class="container">
+	<p>
+  An example of a static website is the Lehman 
+  <ul><a href="http://japanese-lehman.info/#">Japanese department</a></il> website. It looks 
+  like it's mostly maybe up of html. It's not retaining any info to 
+  an external space like a database. What I like about it is it's pretty simple 
+  but looks nice and it's kind of mobile friendly. Also the layout is good. What I don't like 
+  about it is everything is on the same page but on the plus side is the links at the top 
+  takes you to each section.		
+	</p>
+  <p>
+  An example of a Dynamic website is this Lash website called 
+  <ul><a href="https://www.doelashes.com/">Doe Lashes</a></il>. I really enjoy the 
+  color palette of the website and how complex it is but it's very organize. I find it very 
+  interactive too, like its logo in the home screen and the pop ups for subscription. Which is what makes it dynamic 
+  since it's a website to shop, you know there's a database where they can pull stock quantity, email subscriptions, 
+  and etc.	
+  </p>
+</div>
+</body>
+</html>
