@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Display a popup on click</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position:absolute; top: 0; bottom: 0; width: 110%; }
+</style>
+</head>
+<body>
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 14px/24px 'Helvetica Neue', Copperplate, Ariel, sans-serif;
+    }
+</style>
+<style type="text/css">
+    #info {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #222;
+        background: #fff;
+    }
+</style>
+<div id="map"></div>
+<pre id="info"></pre>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicGF0aG1hcHBlciIsImEiOiJjamcyZmhiMzYwNHk3MnFwNzhqNnlzNzVxIn0.tPftHKIKgxHBfXIi-astrQ';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-74.5, 40], // starting position
+        zoom: 9 // starting zoom
+    });
+
+    document.getElementById('info').innerHTML = "Places to go this Week in NYC if bored"
+</script>
+
+<script>
+
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWhyMTIzNCIsImEiOiJja2VoNGNmMjMwN2cxMnhtcDhmczhkejk1In0.rV_j8ObNnxnglm1YuwdNtw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-73.97, 40.77],
+        zoom: 11.8
+    });
+
+    map.on('load', function() {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Arts At Hunter</strong><p><a href="https://ooa.artsathunter.net/event/go-with-ooa-into-the-woods-watch-party/" target="_blank" title="Opens in a new window">Into the Woods Watch Party</a> is a musical by Stephen Sondheim that brings together many famous fairy tales. This viewing was reorded live at London Regent Park Open Air Theater. Thur Feb 11, 6:00-8:30 p.m.</p>',
+                            'icon': 'theatre'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.96402, 40.76802]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>La Palapa</strong><p>Head to St. Mark Place on 1st Ave for some good Mexiacan food at <a href="https://www.lapalapa.com" target="_blank" title="Opens in a new window">La Palapa</a>, starting February 14th for indoor dining at 25% capacity.</p>',
+                            'icon': 'bar'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.98564350550193, 40.72787887844821]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>El Mercadito de Chilito</strong><p>A pop up market to help support small buisnesses on East Harlem, NY (184 E. 109ST.)Which is being held by <a href="https://www.instagram.com/p/CK42JCDD9LK/" target="_blank" title="Opens in a new window">Chilito NYC</a> on Saturday. There will be mexican street snacks, drinks, candy, tres leche cake, vegan coquito, and Handmade goods. 1:30-7:00 p.m.**Masks and social distancing will be enforced**</p>',
+                            'icon': 'grocery'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.94350615210344, 40.79378445752104]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Half Gallery</strong><p>The <a href="http://www.halfgallery.com/" target="_blank" title="Opens in a new window">Half Gallery</a> is a small art gallery with contempary art and it is completly free for the public. 12:00-6:00 p.m. closed on Sundays.</p>',
+                            'icon': 'art-gallery'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.98227892447481, 40.72368473335281]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Central Park Bike Ride</strong><p>Enjoy Central Park by taking a bike ride you don\'t even have to own a bike you can rent one with <a href="https://www.citibikenyc.com" target="_blank" title="Opens in a new window">Citi Bike</a> and it\'s pretty cheap.12:00-6:00 p.m.</p>',
+                            'icon': 'bicycle'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.98083151688397, 40.76884705780483]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Black Tap Singles & Doubles Pop Up</strong><p>Get some great burgers and try their iconic crazy shakes that are insta worthy at <a href="https://blacktap.com/location/soho/" target="_blank" title="Opens in a new window">Black Tap.</a> Staring February 14th there will be indoor dining.11:00-9:00 p.m.</p>',
+                            'icon': 'restaurant'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-74.00022414943244, 40.72585401459499]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>The High School of Fashion Industries</strong><p>See creative window displays at <a href="https://www.hsfi.nyc/about-us" target="_blank" title="Opens in a new window">HSFI</a> which was made by students of the school. Each semester there\'s a different theme. It\'s completly free and there all day unless it\'s under construstion.</p>',
+                            'icon': 'art-gallery'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.99591567061428, 40.745743738323085]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>The High Line</strong><p>Is a really cool park that is elevated because it was built on a old rail line. The <a href="https://www.thehighline.org/" target="_blank" title="Opens in a new window"><em>High Line</em></a> offers a beautiful view of the city and river and once you complete the long walk you\' ll end up seeing Javis center. 7:00-7:00 p.m</p>',
+                            'icon': 'garden'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-74.00430355360164, 40.7481143697412]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>New-York Historical Society</strong><p><a href="https://www.nyhistory.org/" target="_blank">New-York Historical Society</a> is a small museum right next to the American Museum of Natural History that has different exibits about NY and US history. Hours may vary. </p>',
+                            'icon': 'museum'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-73.97344654902085, 40.779584251224456]
+                        }
+                    }
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}-15',
+                'icon-allow-overlap': true
+            }
+        });
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function() {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+
+</body>
+</html>
