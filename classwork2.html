@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="volletball.png" alt="Haikyuu Volleyball">
+        <p>This is the link of a anime I'm currently watching and what's it about <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script type="text/javascript">
+      var link = document.querySelector('a');
+      link.textContent = 'Haikyuu Wiki';
+      link.href = 'https://haikyuu.fandom.com/wiki/Haikyuu!!_Wiki';
+      var img = document.querySelector('img');
+      img.src = 'hvolleyball.png';
+
+      var sect = document.querySelector('section'); //assign a variable to <section>
+      var para = document.createElement('p'); //create a new <p> element and assign it to a variable
+      para.textContent = 'I hope you will look into it :).'; //add text to the new <p>
+      sect.appendChild(para); //place the new paragraph in the <section>
+var p = para.style;
+var s = sect.style;
+s.backgroundColor = 'pink';
+s.color = 'red';
+p.color = 'red';
+p.backgroundColor = 'orange';
+p.padding = '10px';
+p.width = '250px';
+p.textAlign = 'center';
+
+</script>
+  </body>
+</html>
